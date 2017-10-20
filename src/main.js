@@ -10,8 +10,8 @@ import './style/style.scss'
 $(document).foundation()
 
 window.contentfulClient = createClient({
-  accessToken: 'e52765142537e7bbd550d7eaa928f7c618c1737a4ed54c17dbd4031949a4f262',
-  space: 'zjd4jl2bg8e3'
+  accessToken: 'a6e983108e36277cae5e4daa6f591ffb81eda8c8c8054f0251fd847bcbffeeb4',
+  space: 'vmu4ico0uc5f'
 });
 
 contentfulClient.getEntries()
