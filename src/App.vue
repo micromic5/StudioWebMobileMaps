@@ -57,7 +57,15 @@ export default {
           });
 
           // create infowindow
-          let cs = `<div>${item.fields.title}</div>`;
+          let cs = 
+            `<div class="infoWindow">
+              <div class="infoWindowTitle">${item.fields.title}</div>
+              <div class="infoWindowDescription">${item.fields.description}</div>
+              <div class="infoWindowOldPicture"><image src="${item.fields.oldPicture.fields.file.url}"></div>
+              <div class="infoWindowNewPicture"><image src="${item.fields.newPicture.fields.file.url}"></div>
+              <div class="infoWindowYear">${item.fields.year}</div>
+            </div>`;
+            
           let cms_iw = new google.maps.InfoWindow({
                 content: cs
           });
