@@ -9,6 +9,7 @@ import './style/style.scss'
 import mapStyleModule from './modules/mapStyle.js'
 import imageSlider from './components/imageSlider.vue'
 import map from './components/map.vue'
+import infoWindow from './components/info-window.vue'
 //test stuff
 import myTestModule from './modules/mymodule.js'
 import myComp from './components/myComp.vue'
@@ -29,6 +30,7 @@ contentfulClient.getEntries()
 Vue.component("my-comp", myComp);
 Vue.component("image-slider",imageSlider);
 Vue.component("map-component", map);
+Vue.component("info-window",infoWindow);
 
 new Vue({
   el: '#app',

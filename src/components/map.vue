@@ -49,17 +49,19 @@ export default {
 
             // create infowindow
             let cs = 
-              `<div class="infoWindow">
-                <div class="infoWindowTitle">${item.fields.title}</div>
-                <div class="infoWindowDescription">${item.fields.description}</div>
-                <div class="infoWindowOldPicture"><image src="${item.fields.oldPicture.fields.file.url}"></div>
-                <div class="infoWindowNewPicture"><image src="${item.fields.newPicture.fields.file.url}"></div>
-                <div class="infoWindowYear">${item.fields.year}</div>
+              `<div class="infoWindow" id="info-window${item.sys.id}">
+                <info-window title="${item.fields.title}" desc="${item.fields.description}"
+                 old-image="${item.fields.oldPicture.fields.file.url}" new-image="${item.fields.newPicture.fields.file.url}"
+                  year="${item.fields.year}"></info-window>
               </div>`;
-              
+ 
             let cms_iw = new google.maps.InfoWindow({
-                  content: cs
+                content: cs,                
             });
+            google.maps.event.addListener(cms_iw, 'domready', function(){
+                new Vue().$mount(`#info-window${item.sys.id}`);
+            });
+            cms_iw.open();
 
             // Infowindow oeffenen bei Click auf Marker
             marker.addListener('click', event => { cms_iw.open(this.map, marker)});
