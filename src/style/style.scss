@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Vollkorn:400,400i,600,600i,700,700i,900,900i');
+
 body{
     background-color: rgb(185, 34, 34)
 }
@@ -12,6 +14,13 @@ body{
 }
 
 #map{
-    width:80vw;
-    height:80vh;
+    width:100vw;
+    height:100vh;
+    position:absolute;
+}
+
+h1{
+
+    font-family: 'Vollkorn', serif;
+    
 }

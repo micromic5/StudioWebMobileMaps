@@ -226,6 +226,7 @@ export default {
       };
       this.map = new google.maps.Map(element, options);
       this.map.setOptions({styles:styles});
+      this.map.setOptions({draggable: false});
     },
     
     getMapContetn: function(){
