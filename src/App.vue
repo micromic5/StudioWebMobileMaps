@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <h1 v-if="showTitle">{{ message }}</h1>
-    <image-slider></image-slider>
+    <h1 id="header" v-if="showTitle">{{ message }}</h1>
     <map-component></map-component>    
   </div>
 </template>
