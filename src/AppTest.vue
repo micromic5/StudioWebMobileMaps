@@ -1,6 +1,19 @@
 <template>
   <div id="app">
     <h1 v-if="showTitle">{{ message }}</h1>
+    <button :disabled="buttonDisabled" v-on:click="increment">My Buttom</button>
+    <div>{{counter}}</div>
+    <div class="grid-x">
+      <div class="cell auto"><span>test</span></div>
+      <div class="cell auto"><span>test</span></div>
+      <div class="cell auto"><span>test</span></div>
+    </div>
+    <ul>
+      <li v-for="item in items">
+        {{item.ort+", "+item.kanton}}
+      </li>
+    </ul>
+    <my-comp character="wild"></my-comp>
     <image-slider></image-slider>
     <map-component></map-component>    
   </div>
