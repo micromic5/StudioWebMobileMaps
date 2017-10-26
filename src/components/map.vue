@@ -2,6 +2,9 @@
   <div id="map"></div>
 </template>
 <script>
+import Vue from 'vue'
+import mapStyleModule from '../modules/mapStyle.js'
+
 export default {
   name: "map-comp",
   data: function() {
@@ -17,17 +20,13 @@ export default {
     setupMap: function(){
       const element = document.getElementById("map");
       const options = {
-        zoom: 14,
+        zoom: 16,
         center: new google.maps.LatLng(47.071467, 8.277621),
         disableDefaultUI: true
       };
       this.map = new google.maps.Map(element, options);
-<<<<<<< HEAD
-    //  this.map.setOptions({styles:styles});
-=======
-      this.map.setOptions({styles:styles});
+      this.map.setOptions({styles:mapStyleModule});
       this.map.setOptions({draggable: false});
->>>>>>> e9f1ef3def9d66f847b4b7dd123e38c25ef7459e
     },
     
     getMapContetn: function(){
