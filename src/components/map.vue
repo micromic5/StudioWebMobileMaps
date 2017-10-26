@@ -220,7 +220,7 @@ export default {
   ];
       const element = document.getElementById("map");
       const options = {
-        zoom: 14,
+        zoom: 16,
         center: new google.maps.LatLng(47.071467, 8.277621),
         disableDefaultUI: true
       };
