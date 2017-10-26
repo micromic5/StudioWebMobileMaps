@@ -7,6 +7,7 @@ import './assets/foundation/css/foundation.css'
 import {createClient} from 'contentful'
 import './style/style.scss'
 import imageSlider from './components/imageSlider.vue'
+import map from './components/map.vue'
 //test stuff
 import myTestModule from './modules/mymodule.js'
 import myComp from './components/myComp.vue'
@@ -27,6 +28,7 @@ contentfulClient.getEntries()
 
 Vue.component("my-comp", myComp);
 Vue.component("image-slider",imageSlider);
+Vue.component("map-component", map);
 
 new Vue({
   el: '#app',

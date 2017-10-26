@@ -1,6 +1,6 @@
 <template>
   <div>
-      {{greeting}} 
+      {{greeting}}
   </div>
 </template>
 <script>
@@ -8,7 +8,7 @@ export default{
     name: "image-slider",
     data: function(){
         return {
-            greeting:"ImageSlider"
+            greeting:"ImageSlider aaaaaaaa aaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa"
         }
     },
     props: ['image1','image2'],
