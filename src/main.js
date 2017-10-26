@@ -6,6 +6,7 @@ import './assets/foundation/js/vendor/what-input.js'
 import './assets/foundation/css/foundation.css'
 import {createClient} from 'contentful'
 import './style/style.scss'
+import mapStyleModule from './modules/mapStyle.js'
 import imageSlider from './components/imageSlider.vue'
 import map from './components/map.vue'
 //test stuff
@@ -15,7 +16,6 @@ import myComp from './components/myComp.vue'
 
 $(document).foundation()
 
-console.log(myTestModule)
 
 window.contentfulClient = createClient({
   accessToken: 'a6e983108e36277cae5e4daa6f591ffb81eda8c8c8054f0251fd847bcbffeeb4',
