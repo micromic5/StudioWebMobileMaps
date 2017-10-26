@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1 id="header" v-if="showTitle">{{ message }}</h1>
+    <h1 id="header">{{ message }}</h1>
     <map-component></map-component>    
   </div>
 </template>
@@ -11,10 +11,6 @@ export default {
   data(){
     return{
       message:"Welcome to Vue.js",
-      items: [{ort: "emmenbrücke", kanton: "LU"},{ort:"Rotkreuz",kanton:"ZG"}],
-      buttonDisabled:false,
-      showTitle:true,
-      counter:0,
     }
   },
   mounted: function() {
