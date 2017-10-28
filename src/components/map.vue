@@ -9,8 +9,9 @@ export default {
   name: "map-comp",
   data: function() {
     return {
-      greeting: "Hello"
-    };
+      greeting: "Hello",
+      markersArray:[]
+    }
   },
   mounted: function() {
     this.setupMap();
@@ -26,7 +27,7 @@ export default {
       };
       this.map = new google.maps.Map(element, options);
       this.map.setOptions({styles:mapStyleModule});
-      this.map.setOptions({draggable: false});
+      //this.map.setOptions({draggable: false});
     },
     
     getMapContetn: function(){
@@ -46,7 +47,7 @@ export default {
               icon: icon,
               map: this.map
             });
-
+            this.markersArray.push(marker);
             // create infowindow
             let cs = 
               `<div class="infoWindow" id="info-window${item.sys.id}">
@@ -64,7 +65,7 @@ export default {
             cms_iw.open();
 
             // Infowindow oeffenen bei Click auf Marker
-            marker.addListener('click', event => { cms_iw.open(this.map, marker)});
+            marker.addListener('click', event => { cms_iw.open(this.map, marker);this.map.panTo(marker.position)});
             cms_markers.push(marker);
           });
         });

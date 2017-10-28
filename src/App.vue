@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <h1 id="header">{{ message }}</h1>
-    <map-component></map-component>    
+    <div id="intro"></div>
+    <map-component></map-component>  
+    <content-slider></content-slider>  
   </div>
 </template>
 

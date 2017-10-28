@@ -10,9 +10,12 @@ import './assets/twentytwenty-master/css/twentytwenty.css'
 import {createClient} from 'contentful'
 import './style/style.scss'
 import mapStyleModule from './modules/mapStyle.js'
+import scrollModule from './modules/scroll.js'
 import imageSlider from './components/imageSlider.vue'
 import map from './components/map.vue'
 import infoWindow from './components/info-window.vue'
+import contentSlider from './components/contentSlider.vue'
+import contentSliderContent from './components/contentSliderContent.vue'
 //test stuff
 import myTestModule from './modules/mymodule.js'
 import myComp from './components/myComp.vue'
@@ -34,6 +37,8 @@ Vue.component("my-comp", myComp);
 Vue.component("image-slider",imageSlider);
 Vue.component("map-component", map);
 Vue.component("info-window",infoWindow);
+Vue.component("contentSlider",contentSlider);
+Vue.component("content-slider-content",contentSliderContent);
 
 new Vue({
   el: '#app',
