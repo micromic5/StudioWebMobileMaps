@@ -12,9 +12,8 @@ body{
 }
 
 #map{
-    width:50vw;
+    width:98.9vw;
     height:100vh;
-    position:absolute;
 }
 
 h1{
@@ -28,6 +27,16 @@ padding-top: 10vh;
 }
 
 #intro{
-    width:100wh;
+    width:100vh;
     height:100vh;
+}
+
+.open{
+    width:100vh;
+    height:100vh;
+}
+.close{
+    width:0vh;
+    height:0vh;
+    overflow:hidden;
 }

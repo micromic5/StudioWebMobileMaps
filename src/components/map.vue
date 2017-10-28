@@ -9,12 +9,12 @@ export default {
   name: "map-comp",
   data: function() {
     return {
-      greeting: "Hello",
       markersArray:[]
     }
   },
   mounted: function() {
     this.setupMap();
+    this.insertFirstContent();
     this.getMapContetn();
   },
    methods:{
@@ -48,29 +48,30 @@ export default {
               map: this.map
             });
             this.markersArray.push(marker);
-            // create infowindow
-            let cs = 
-              `<div class="infoWindow" id="info-window${item.sys.id}">
-                <info-window title="${item.fields.title}" desc="${item.fields.description}"
-                 old-image="${item.fields.oldPicture.fields.file.url}" new-image="${item.fields.newPicture.fields.file.url}"
-                  year="${item.fields.year}"></info-window>
-              </div>`;
- 
-            let cms_iw = new google.maps.InfoWindow({
-                content: cs,                
+            // Beim Klick auf den Marker wird der Inhalt des content-div mit dem Content ersetzt
+            marker.addListener('click', event => {
+              this.map.panTo(marker.position);
+              $("#content-div").html(`<content-replace-div id="content-replace" title="${item.fields.title}" desc="${item.fields.description}"
+                old-image="${item.fields.oldPicture.fields.file.url}" new-image="${item.fields.newPicture.fields.file.url}"
+                year="${item.fields.year}"></content-replace-div>`);
+                new Vue().$mount(`#content-replace`);
+                $("#content-div").attr('class', 'open');
             });
-            google.maps.event.addListener(cms_iw, 'domready', function(){
-                new Vue().$mount(`#info-window${item.sys.id}`);
-            });
-            cms_iw.open();
-
-            // Infowindow oeffenen bei Click auf Marker
-            marker.addListener('click', event => { cms_iw.open(this.map, marker);this.map.panTo(marker.position)});
             cms_markers.push(marker);
           });
         });
+    },
+
+    insertFirstContent: function(){
+       contentfulClient.getAsset("5wutUrRRPUC8wg6CiMOW0W")
+      .then(entry => {
+           $("#content-div").html(`<content-replace-div id="content-replace" title="first" desc="firstdesc"
+          old-image="`+entry.fields.file.url+`" new-image="`+entry.fields.file.url+`"
+          year="17"></content-replace-div>`);
+          new Vue().$mount(`#content-replace`);
+      });     
+      $("#content-div").attr('class', 'close');
     }
-  },
-  props: ["character"]
+  }
 };
 </script>

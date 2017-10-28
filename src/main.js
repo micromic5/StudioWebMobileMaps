@@ -14,8 +14,7 @@ import scrollModule from './modules/scroll.js'
 import imageSlider from './components/imageSlider.vue'
 import map from './components/map.vue'
 import infoWindow from './components/info-window.vue'
-import contentSlider from './components/contentSlider.vue'
-import contentSliderContent from './components/contentSliderContent.vue'
+import contentReplaceDiv from './components/contentDiv.vue';
 //test stuff
 import myTestModule from './modules/mymodule.js'
 import myComp from './components/myComp.vue'
@@ -28,17 +27,14 @@ window.contentfulClient = createClient({
   accessToken: 'a6e983108e36277cae5e4daa6f591ffb81eda8c8c8054f0251fd847bcbffeeb4',
   space: 'vmu4ico0uc5f'
 });
-
+/*
 contentfulClient.getEntries()
 .then((response) => console.log(response.items))
 .catch(console.error);
-
-Vue.component("my-comp", myComp);
+*/
 Vue.component("image-slider",imageSlider);
 Vue.component("map-component", map);
-Vue.component("info-window",infoWindow);
-Vue.component("contentSlider",contentSlider);
-Vue.component("content-slider-content",contentSliderContent);
+Vue.component("content-replace-div",contentReplaceDiv);
 
 new Vue({
   el: '#app',
