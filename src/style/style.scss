@@ -32,11 +32,12 @@ padding-top: 10vh;
 }
 
 .open{
-    width:100vh;
     height:100vh;
+    background-color:red;
 }
 .close{
     width:0vh;
     height:0vh;
-    overflow:hidden;
+    background-color:red;
+    //overflow:hidden;
 }

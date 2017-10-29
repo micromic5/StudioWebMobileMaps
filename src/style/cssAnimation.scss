@@ -1,0 +1,15 @@
+.open {
+    width: 0px;
+    -webkit-transition:width 3000ms ease-in-out;
+    -moz-transition:width 3000ms ease-in-out;
+    -o-transition:width 3000ms ease-in-out;
+    transition:width 3000ms ease-in-out;
+}
+
+.close {
+    width: 100vh;    
+    -webkit-transition:width 3000ms ease-in-out;
+    -moz-transition:width 3000ms ease-in-out;
+    -o-transition:width 3000ms ease-in-out;
+    transition:width 3000ms ease-in-out;
+}

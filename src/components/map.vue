@@ -28,6 +28,10 @@ export default {
       this.map = new google.maps.Map(element, options);
       this.map.setOptions({styles:mapStyleModule});
       //this.map.setOptions({draggable: false});
+      this. map.addListener('click', function(){
+        $("#content-div").attr('class', 'close');
+        $("#content-div").css({"width": "0px"});
+      });
     },
     
     getMapContetn: function(){
@@ -54,8 +58,9 @@ export default {
               $("#content-div").html(`<content-replace-div id="content-replace" title="${item.fields.title}" desc="${item.fields.description}"
                 old-image="${item.fields.oldPicture.fields.file.url}" new-image="${item.fields.newPicture.fields.file.url}"
                 year="${item.fields.year}"></content-replace-div>`);
-                new Vue().$mount(`#content-replace`);
+                setTimeout(function(){new Vue().$mount(`#content-replace`)},3001);
                 $("#content-div").attr('class', 'open');
+                $("#content-div").css({"width": "100vh"});
             });
             cms_markers.push(marker);
           });
@@ -70,7 +75,8 @@ export default {
           year="17"></content-replace-div>`);
           new Vue().$mount(`#content-replace`);
       });     
-      $("#content-div").attr('class', 'close');
+      $("#content-div").attr('class', 'open');
+      $("#content-div").css({"width": "0px"});
     }
   }
 };

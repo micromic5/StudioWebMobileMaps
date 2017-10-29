@@ -3,7 +3,7 @@
     <h1 id="header">{{ message }}</h1>    
     <div id="intro"></div>
     <map-component></map-component>
-    <div id="content-div" class="close"></div> 
+    <div id="content-div"></div> 
   </div>
 </template>
 
