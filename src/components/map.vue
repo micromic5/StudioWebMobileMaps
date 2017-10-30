@@ -29,8 +29,12 @@ export default {
       this.map.setOptions({styles:mapStyleModule});
       //this.map.setOptions({draggable: false});
       this. map.addListener('click', function(){
+        $("#content-div").css({"overflow": "visible"});
         $("#content-div").attr('class', 'close');
-        $("#content-div").css({"width": "0px"});
+        $("#content-div").css({"width": "0vw"});
+        setTimeout(function(){
+          $("#content-div").css({"overflow": "hidden"});
+        },2600);
       });
     },
     
@@ -59,8 +63,9 @@ export default {
                 old-image="${item.fields.oldPicture.fields.file.url}" new-image="${item.fields.newPicture.fields.file.url}"
                 year="${item.fields.year}"></content-replace-div>`);
                 setTimeout(function(){new Vue().$mount(`#content-replace`)},3001);
+                $("#content-div").css({"overflow": "visible"});
                 $("#content-div").attr('class', 'open');
-                $("#content-div").css({"width": "100vh"});
+                $("#content-div").css({"width": "83vw"});
             });
             cms_markers.push(marker);
           });
@@ -75,8 +80,8 @@ export default {
           year="17"></content-replace-div>`);
           new Vue().$mount(`#content-replace`);
       });     
-      $("#content-div").attr('class', 'open');
-      $("#content-div").css({"width": "0px"});
+  //    $("#content-div").attr('class', 'open');
+  //    $("#content-div").css({"width": "0vw"});
     }
   }
 };

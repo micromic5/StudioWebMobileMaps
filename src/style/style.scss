@@ -12,6 +12,7 @@ body{
 }
 
 #map{
+    position:absolute;
     width:98.9vw;
     height:100vh;
 }
@@ -33,11 +34,13 @@ padding-top: 10vh;
 
 .open{
     height:100vh;
-    background-color:red;
 }
 .close{
     width:0vh;
     height:0vh;
+}
+
+#content-div{
     background-color:red;
-    //overflow:hidden;
+    position: absolute;
 }

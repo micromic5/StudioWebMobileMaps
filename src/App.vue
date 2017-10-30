@@ -2,8 +2,8 @@
   <div id="app">
     <h1 id="header">{{ message }}</h1>    
     <div id="intro"></div>
-    <map-component></map-component>
-    <div id="content-div"></div> 
+    <div id="map-div"><map-component></map-component></div>
+    <div id="content-div" style="width:0px;overflow:hidden"></div> 
   </div>
 </template>
 
