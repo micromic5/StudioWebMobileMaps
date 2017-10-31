@@ -29,7 +29,9 @@ export default {
       this.map.setOptions({styles:mapStyleModule});
       //this.map.setOptions({draggable: false});
       this. map.addListener('click', function(){
-        $("#content-div").css({"overflow": "visible"});
+        if($("#content-div").attr("class") != "close"){
+          $("#content-div").css({"overflow": "visible"});
+        }
         $("#content-div").attr('class', 'close');
         $("#content-div").css({"width": "0vw"});
         setTimeout(function(){
