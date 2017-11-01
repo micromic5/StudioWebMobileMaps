@@ -64,10 +64,14 @@ export default {
               $("#content-div").html(`<content-replace-div id="content-replace" title="${item.fields.title}" desc="${item.fields.description}"
                 old-image="${item.fields.oldPicture.fields.file.url}" new-image="${item.fields.newPicture.fields.file.url}"
                 year="${item.fields.year}"></content-replace-div>`);
-                setTimeout(function(){new Vue().$mount(`#content-replace`)},3001);
-                $("#content-div").css({"overflow": "visible"});
-                $("#content-div").attr('class', 'open');
-                $("#content-div").css({"width": "83vw"});
+                if($("#content-div").attr('class')!="open"){
+                  setTimeout(function(){new Vue().$mount(`#content-replace`)},3001);
+                  $("#content-div").css({"overflow": "visible"});
+                  $("#content-div").attr('class', 'open');
+                  $("#content-div").css({"width": "83vw"});
+                }else{
+                  new Vue().$mount(`#content-replace`);
+                }
             });
             cms_markers.push(marker);
           });
