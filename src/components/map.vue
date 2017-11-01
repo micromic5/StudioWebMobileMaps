@@ -60,7 +60,7 @@ export default {
             this.markersArray.push(marker);
             // Beim Klick auf den Marker wird der Inhalt des content-div mit dem Content ersetzt
             marker.addListener('click', event => {
-              this.map.panTo({lat:marker.position.lat(),lng:marker.position.lng()-.017});
+              this.map.panTo({lat:marker.position.lat(),lng:marker.position.lng()-.014});
               $("#content-div").html(`<content-replace-div id="content-replace" title="${item.fields.title}" desc="${item.fields.description}"
                 old-image="${item.fields.oldPicture.fields.file.url}" new-image="${item.fields.newPicture.fields.file.url}"
                 year="${item.fields.year}"></content-replace-div>`);
