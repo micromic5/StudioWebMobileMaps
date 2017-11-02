@@ -13,7 +13,7 @@ export default {
         .then(entry => {return entry.fields.file}),
       passivIcon:contentfulClient.getAsset("4Q18909usM8WkQyy4GI2MI")
         .then(entry => {return entry.fields.file}),
-      activMarker: new google.maps.Marker()
+      activMarker: null
     }
   },
   mounted: function() {
@@ -34,7 +34,9 @@ export default {
       //this.map.setOptions({draggable: false});
       this.map.addListener('click', function(){
        // this.passivIcon.then(function(k){console.log(k)});
+       if(this.activMarker != null){
         this.passivIcon.then(newIcon =>{this.activMarker.setIcon(newIcon)});
+       }
         if($("#content-div").attr("class") != "close"){
           $("#content-div").css({"overflow": "visible"});
         }
@@ -64,42 +66,14 @@ export default {
               this.markersArray.push(marker);
               // Beim Klick auf den Marker wird der Inhalt des content-div mit dem Content ersetzt
               marker.addListener('click', event => {
-               // if(this.activMarker != null){
-                  this.passivIcon.then(newIcon =>{this.activMarker.setIcon(newIcon)});
-                //}
-                this.activMarker = marker;/*
-
-
-
-
-
-                TODO
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                */
-                //Icon wird nicht gesetzt keine Ahnung warum
+                if(this.activMarker != null){
+                  this.passivIcon.then(newIcon =>{
+                    this.activMarker.setIcon(newIcon);
+                    this.activMarker = marker;
+                  });
+                }else{
+                  this.activMarker = marker;
+                }
                 this.activIcon.then(newIcon =>{marker.setIcon(newIcon)});
                 this.map.panTo({lat:marker.position.lat(),lng:marker.position.lng()-.014});
                 $("#content-div").html(`<content-replace-div id="content-replace" title="${item.fields.title}" desc="${item.fields.description}"
