@@ -63,7 +63,7 @@ export default {
               this.map.panTo({lat:marker.position.lat(),lng:marker.position.lng()-.014});
               $("#content-div").html(`<content-replace-div id="content-replace" title="${item.fields.title}" desc="${item.fields.description}"
                 old-image="${item.fields.oldPicture.fields.file.url}" new-image="${item.fields.newPicture.fields.file.url}"
-                year="${item.fields.year}"></content-replace-div>`);
+                year="${item.fields.year}" slider="${item.fields.slider}"></content-replace-div>`);
                 if($("#content-div").attr('class')!="open"){
                   setTimeout(function(){new Vue().$mount(`#content-replace`)},3001);
                   $("#content-div").css({"overflow": "visible"});
