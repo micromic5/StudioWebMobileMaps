@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 
+import './assets/font-awesome/css/font-awesome.min.css'
 import './assets/foundation/js/vendor/foundation.js'
 import './assets/foundation/js/vendor/what-input.js'
 import './assets/foundation/css/foundation.css'

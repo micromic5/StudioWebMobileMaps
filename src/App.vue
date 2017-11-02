@@ -1,8 +1,14 @@
 <template>
   <div id="app">
-    <h1 id="header">{{ message }}</h1>    
-    <div id="intro">test</div>
-    <div id="i-button"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></div>
+    <h1 id="header">Emmenbrücke</h1>
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x">
+        <div class="large-12 cell intro">
+          <h1><a href="#map-div">Vom Bauerndorf zum Industriestandort</a></h1>
+        </div>
+      </div>
+      </div>
+    <div id="i-button"><a href="index.html#map-div">ddfd</a></div>
     <div id="map-div"><map-component></map-component></div>
     <div id="content-div" class="close" style="width:0px;overflow:hidden"></div> 
   </div>
