@@ -12,7 +12,7 @@
             <img :src="oldImage">
             <img :src="newImage">
         </div>
-        <div class="year">{{year}}</div>
+        <div v-if="yearDisabled" class="year">{{year}}</div>
     </div>
 </template>
 <script>
@@ -24,7 +24,8 @@ export default{
         return {
             id: null,
             showSlider: false,
-            isImageLoaded: false
+            isImageLoaded: false,
+            yearDisabled: false
         }
     },
     methods:{
@@ -40,6 +41,7 @@ export default{
         }
     },
     mounted:function(){
+        this.yearDisabled = (this.year != 'undefined');
         this.showSlider = (this.slider==="true");
     }
 }
