@@ -1,16 +1,19 @@
 .open {
-    width: 10vw;
+   /* transform:translate(75vw,0);*/
+    right:75vw;
+    
     -webkit-transition:width 3000ms ease-in-out;
     -moz-transition:width 3000ms ease-in-out;
     -o-transition:width 3000ms ease-in-out;
     transition:width 3000ms ease-in-out;
+    background-color: #E17950;
 }
 
 .close {
-    width: 83vw;   
-    height:100vh; 
+    right:-75vw;    
     -webkit-transition:width 3000ms ease-in-out;
     -moz-transition:width 3000ms ease-in-out;
     -o-transition:width 3000ms ease-in-out;
     transition:width 3000ms ease-in-out, height 3000ms ease-in-out;
+    background-color: #000000;
 }

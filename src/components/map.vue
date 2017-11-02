@@ -25,9 +25,9 @@ export default {
     setupMap: function(){
       const element = document.getElementById("map");
       const options = {
-        zoom: 16,
-        center: new google.maps.LatLng(47.071467, 8.277621),
-        disableDefaultUI: true
+        zoom: 15,
+        center: new google.maps.LatLng(47.071676, 8.294066),
+        disableDefaultUI: true,
       };
       this.map = new google.maps.Map(element, options);
       this.map.setOptions({styles:mapStyleModule});
@@ -39,10 +39,7 @@ export default {
           $("#content-div").css({"overflow": "visible"});
         }
         $("#content-div").attr('class', 'close');
-        $("#content-div").css({"width": "0vw"});
-        setTimeout(function(){
-          $("#content-div").css({"overflow": "hidden"});
-        },2600);
+       
       }.bind(this));
     },
     
@@ -109,10 +106,8 @@ export default {
                   old-image="${item.fields.oldPicture.fields.file.url}" new-image="${item.fields.newPicture.fields.file.url}"
                   year="${item.fields.year}" slider="${item.fields.slider}"></content-replace-div>`);
                   if($("#content-div").attr('class')!="open"){
-                    setTimeout(function(){new Vue().$mount(`#content-replace`)},3001);
-                    $("#content-div").css({"overflow": "visible"});
+                    new Vue().$mount(`#content-replace`);
                     $("#content-div").attr('class', 'open');
-                    $("#content-div").css({"width": "83vw"});
                   }else{
                     new Vue().$mount(`#content-replace`);
                   }
