@@ -5,8 +5,8 @@
             {{ desc }}
         </div>
         <div v-if="showSlider!==false" :id="'id'+id" class="image-slider-container">
-            <img :src="oldImage" @load="imageLoaded">
-            <img :src="newImage" @load="imageLoaded">
+            <img :src="oldImage">
+            <img :src="newImage">
         </div>
         <div v-else  class="image-container">
             <img :src="oldImage">
@@ -27,24 +27,15 @@ export default{
     data: function(){
         return {
             id: null,
-            showSlider: false,
-            isImageLoaded: false
-        }
-    },
-    methods:{
-        imageLoaded:function(){
-            if(this.isImageLoaded){
-                if(this.showSlider == true){
-                    this.id = this._uid;
-                 Vue.nextTick(function(){$("#id"+this.id).twentytwenty();}.bind(this));
-                }
-            }else{
-                this.isImageLoaded = true;
-            }
+            showSlider: false
         }
     },
     mounted:function(){
         this.showSlider = (this.slider==="true");
+        if(this.showSlider == true){
+            this.id = this._uid;
+            Vue.nextTick(function(){$("#id"+this.id).twentytwenty()}.bind(this));
+        }
     }
 }
 </script>
