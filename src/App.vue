@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <h1 id="header">{{ message }}</h1>    
-    <div id="intro"></div>
+    <div id="intro">test</div>
+    <div id="i-button"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></div>
     <div id="map-div"><map-component></map-component></div>
     <div id="content-div" class="close" style="width:0px;overflow:hidden"></div> 
   </div>
