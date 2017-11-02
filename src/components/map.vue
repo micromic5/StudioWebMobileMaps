@@ -12,7 +12,8 @@ export default {
       activIcon: contentfulClient.getAsset("QayoeFwEQSYOMaUigSW46")
         .then(entry => {return entry.fields.file}),
       passivIcon:contentfulClient.getAsset("4Q18909usM8WkQyy4GI2MI")
-        .then(entry => {return entry.fields.file})
+        .then(entry => {return entry.fields.file}),
+      activMarker: new google.maps.Marker()
     }
   },
   mounted: function() {
@@ -31,7 +32,9 @@ export default {
       this.map = new google.maps.Map(element, options);
       this.map.setOptions({styles:mapStyleModule});
       //this.map.setOptions({draggable: false});
-      this. map.addListener('click', function(){
+      this.map.addListener('click', function(){
+       // this.passivIcon.then(function(k){console.log(k)});
+        this.passivIcon.then(newIcon =>{this.activMarker.setIcon(newIcon)});
         if($("#content-div").attr("class") != "close"){
           $("#content-div").css({"overflow": "visible"});
         }
@@ -40,7 +43,7 @@ export default {
         setTimeout(function(){
           $("#content-div").css({"overflow": "hidden"});
         },2600);
-      });
+      }.bind(this));
     },
     
     getMapContetn: function(){
@@ -64,6 +67,7 @@ export default {
               this.markersArray.push(marker);
               // Beim Klick auf den Marker wird der Inhalt des content-div mit dem Content ersetzt
               marker.addListener('click', event => {
+                this.activMarker = marker;
                 this.activIcon.then(newIcon =>{marker.setIcon(newIcon)});
                 this.map.panTo({lat:marker.position.lat(),lng:marker.position.lng()-.014});
                 $("#content-div").html(`<content-replace-div id="content-replace" title="${item.fields.title}" desc="${item.fields.description}"
