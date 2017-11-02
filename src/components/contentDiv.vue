@@ -1,6 +1,6 @@
 <template>
-   <div class="grid-x grid-margin-x">
-  <div class="medium-6 large-4 cell"><div class="title">{{ title }}</div>
+   <div>
+        <div class="title">{{ title }}</div>
         <div class="description">
             {{ desc }}
         </div>
@@ -12,11 +12,8 @@
             <img :src="oldImage">
             <img :src="newImage">
         </div>
-        
-  <div class="medium-6 large-8 cell">12/6/8 cells</div>
-</div>
-        
-    
+        <div class="year">{{year}}</div>
+    </div>
 </template>
 <script>
 import Vue from "vue";
