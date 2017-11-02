@@ -25,9 +25,9 @@ export default {
     setupMap: function(){
       const element = document.getElementById("map");
       const options = {
-        zoom: 16,
-        center: new google.maps.LatLng(47.071467, 8.277621),
-        disableDefaultUI: true
+        zoom: 15,
+        center: new google.maps.LatLng(47.071676, 8.294066),
+        disableDefaultUI: true,
       };
       this.map = new google.maps.Map(element, options);
       this.map.setOptions({styles:mapStyleModule});
