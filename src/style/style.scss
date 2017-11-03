@@ -41,14 +41,17 @@ h1{
     color: $orange;
     padding-top: 0.9em;
 }
-.start-2{
+.start-text{
 	font-size: 2.2em;
 	line-height: 130%;
 	text-align: center;
 	font-weight: 600;
 	font-family: 'Vollkorn', serif;
-    color: $blue-2;
+    color: $blue-1;
     padding-top: 0.9em;  
+    padding-left:4em;
+    padding-bottom: 0.0em;
+    background-color: #A1B5C2;
 }
 h2{
 	font-family: 'Vollkorn', serif;
@@ -138,27 +141,27 @@ margin-bottom: 20px;
 
 
 a {
-    color:$link;
+    color:$blue-1;
     text-decoration: none;   
 }
 
 a:link {
-    color:$link;
+    color:$blue-1;
     text-decoration: none;  
 }
 
 a:visited {
-    color:$link;
+    color:$blue-1;
     text-decoration: none;
 }
 
 a:hover {
-    color:$link;
+    color:$blue-1;
     text-decoration: none;
 }
 
 a:active {
-    color:$link;
+    color:$blue-1;
     text-decoration:none;
 }
 
