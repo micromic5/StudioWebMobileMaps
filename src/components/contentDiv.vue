@@ -1,6 +1,6 @@
 <template>
-   <div>
-<div class="grid-container">
+   
+   <div class="grid-container">
 
       <div class="grid-x grid-padding-x">
         <div class="large11 cell">
@@ -20,20 +20,12 @@
               <div class="border-image">
                 
 
-                   <div v-if="showSlider!==false" :id="'id'+id" class="image-slider-container">
-            <img :src="oldImage" @load="imageLoaded">
-            <img :src="newImage" @load="imageLoaded">
-        </div>
-        <div v-else  class="image-container">
-            <img :src="oldImage">
-            <img :src="newImage">
-        </div>
+                  
 
 
               </div>
             </div>
                        
-          </div>
 
 </div>
        

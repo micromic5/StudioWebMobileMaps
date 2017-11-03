@@ -21,6 +21,19 @@ body{
 	font-family: 'Roboto', sans-serif;
 }
 
+#content-div{
+    position: relative;
+    height: 100vh;
+    width: 75vw;
+    background-color: $white-1;
+    overflow-y: scroll;
+}
+
+#app {
+    width: 100vw;
+    overflow:hidden;
+}
+
 h1{
 	font-size: 2.2em;
 	line-height: 130%;
@@ -165,7 +178,6 @@ a:active {
     text-decoration:none;
 }
 
-
 #map{
     position:absolute;
     width:98.9vw;
@@ -185,13 +197,6 @@ a:active {
     height:0vh;
 }
 
-#content-div{
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    background-color: $blue-3;
-    overflow: scroll;
-}
 
 .twentytwenty-overlay{
     display:none;
