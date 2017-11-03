@@ -41,7 +41,7 @@
 
                   <hr>
                   <h4>Max Muster</h4>
-			   <p class="kommentar">Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege, und näher an der Erde tausend mannigfaltige Gräschen mir merkwürdig. <br> Wenn ich das Wimmeln der kleinen Welt zwischen Halmen, die unzähligen, unergründlichen Gestalten der Würmchen, der Mückchen näher an meinem Herzen fühle, und fühle die Gegenwart des Allmächtigen, der uns nach seinem Bilde schuf, das Wehen des Alliebenden, der uns in ewiger Wonne schwebend trägt und erhält; mein Freund! </p> 
+			   <p class="kommentar">Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege, und näher an der Erde tausend mannigfaltige Gräschen mir merkwürdig. <br><br> Wenn ich das Wimmeln der kleinen Welt zwischen Halmen, die unzähligen, unergründlichen Gestalten der Würmchen, der Mückchen näher an meinem Herzen fühle, und fühle die Gegenwart des Allmächtigen, der uns nach seinem Bilde schuf, das Wehen des Alliebenden, der uns in ewiger Wonne schwebend trägt und erhält; mein Freund! </p> 
         </div>
   </div> 
 
@@ -54,24 +54,23 @@
 
 
 
-<div class="grid-x formular">
-        <div class="large-4 cell">Name</div>
-        <div class="large-8 cell"><input type="text"></div>
+<div class="grid-x upload">
+        <div class="large-3 cell">
+           </div>
+        <div class="large-8 cell">
+             <h2>Name</h2><input type="text">
+             <h2>Geschichte</h2><textarea rows="10" type="text"></textarea><br>
+              <button>Versenden</button>
+        </div>
 </div>
 
-<div class="grid-x formular">
-        <div class="large-4 cell">E-Mail</div>
-        <div class="large-8 cell"><input type="text"></div>
-</div>
 
-<div class="grid-x formular">
-        <div class="large-4 cell">Geschichte</div>
-        <div class="large-8 cell"><textarea rows="10" type="text"></textarea></div>
-</div>
-        <button class="button expanded">Versenden</button>
+      
 
    
         <div v-if="yearDisabled" class="year">{{year}}</div>
+
+        </div>
     </div>
 </template>
 <script>
