@@ -18,15 +18,15 @@ export default {
   },
   mounted: function() {
     this.setupMap();
-    this.insertFirstContent();
+   // this.insertFirstContent();
     this.getMapContetn();
   },
    methods:{
     setupMap: function(){
       const element = document.getElementById("map");
       const options = {
-        zoom: 15,
-        center: new google.maps.LatLng(47.071676,8.303),
+        zoom: 16,
+        center: new google.maps.LatLng(47.07,8.2895),
         disableDefaultUI: true,
         navigationControl: false,
         mapTypeControl: false,
