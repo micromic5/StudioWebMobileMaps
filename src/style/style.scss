@@ -21,6 +21,10 @@ body{
 	font-family: 'Roboto', sans-serif;
 }
 
+.overlay {
+position: relative;
+
+}
 #content-div{
     position: relative;
     height: 100vh;
@@ -154,10 +158,32 @@ text-align: center;
    
 }
 
-#header {
-background-color: #ffffff;
+.header {
+position:absolute;
+z-index:5;
 }
 
+.header h1{
+    font-size: 3.2em;
+    line-height: 130%;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Vollkorn', serif;
+    color: $blue-1;
+    padding-top: 10em;
+    padding-left: 13em;
+}
+
+.header h2{
+    margin-top: -1em;
+    font-size: 1.8em;
+    padding-left: 32em;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Vollkorn', serif;
+    color: $blue-2;
+    
+}
 
 .upload {
     display: block;
@@ -176,7 +202,8 @@ background-color: #ffffff;
 }
 
 hr {
-    border-top: 2px dashed #8c8b8b;
+    border-top: 1px  #8c8b8b;
+    margin-top: -10px;
 }    
 #map{
     position:absolute;
