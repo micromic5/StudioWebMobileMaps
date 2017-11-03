@@ -31,7 +31,7 @@ export default {
         navigationControl: false,
         mapTypeControl: false,
         scaleControl: false,
-        draggable: false,
+        draggable: true,
         scrollwheel: false,
       };
       this.map = new google.maps.Map(element, options);
