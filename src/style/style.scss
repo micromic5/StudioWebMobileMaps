@@ -56,10 +56,66 @@ body{
     margin-bottom: 3.5em;
     text-align: right;
     font-family: 'Roboto', sans-serif;
-    padding-left:20%;    
+    padding-left:23%;    
     }
 
-    .border-image {
+.comments {
+        line-height: 120%;
+        font-weight: 200;
+        font-family: 'Roboto', sans-serif;
+        color: $blue-3;
+        padding-top: 20px;
+        padding-left:20%; 
+        
+    }
+
+.message {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    color: #54646E;
+    padding-top: 20px;
+}
+
+.kommentar {
+    font-size:0.9em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 140%;
+    letter-spacing: 0.1em;
+    margin-top: 2em;	
+    margin-bottom: 3.2em;
+    text-align: left;
+    color: #000000;
+    
+}
+
+.comments h3 {
+    font-family: 'Vollkorn', serif;
+    font-size: 2em;
+    font-weight: 200;
+    font-style: italic;
+    color: $blue-1;
+    margin-top: 1.2em;
+}
+
+.formular h3 {
+    font-size: 2.6em;
+	line-height: 130%;
+    text-align: right;
+	font-weight: 600;
+	font-family: 'Vollkorn', serif;
+    color: $orange;
+    padding-left:28%;
+}
+
+h4{
+    font-size: 1em;
+    margin-bottom: -0.8em;
+	color:$orange;
+	text-align: left;
+    font-family: 'Roboto', sans-serif;
+}
+.border-image {
         position: relative;
         margin: 0 0 0.5rem 0;
         padding-left:20%;
@@ -80,72 +136,17 @@ h2{
 	font-family: 'Vollkorn', serif;
 	margin-top: 20px;
 }
-h3{
-	color: #E17950;
-	font-family: 'Vollkorn', serif;
-		margin-top: 20px;
-}
 
-h4{
-	font-size: 1.4em;
-	color: #74858D;
-	font-family: 'Vollkorn', serif;
-	text-align: left;
-	color: #E17950;	
-}
 
-.kommentar {
-	
-	font-size:1.2em;
-	line-height: 120%;
-	letter-spacing: 0.1em;
-	font-weight: 300;
-	font-family: 'Roboto', sans-serif;
-	color: #54646E;
-	padding-top: 20px;
-	
-}
+
+
+
 
 .stories {
 margin-top: 30px;
 text-align: center;	
 }
 
-
-.kommentar {
-	
-	font-size:1.2em;
-	line-height: 120%;
-	letter-spacing: 0.1em;
-	font-weight: 300;
-	font-family: 'Roboto', sans-serif;
-	color: #54646E;
-	
-}
-
-
-.blue {
-	
-	background-color: blue;
-}
-
-
-.red {
-	background: red;
-}
-
-
-.border {
-    position: relative;
-    margin: 0 0 1rem 0;
-    padding-left:0.2rem;
-    padding-bottom:1rem;
-    /*
-	border: 1px solid rgba(10, 10, 10, 0.25);
-    border-radius: 3px; 
-    */
-    color: #0a0a0a;
-}
 
 .border-image {
     position: relative;
@@ -156,11 +157,7 @@ text-align: center;
 #header {
 background-color: #ffffff;
 }
-.hero {
-max-width: 100%;
-height: auto;
 
-}
 
 label {
     display: block;
@@ -169,31 +166,6 @@ label {
     font-weight: normal;
     line-height: 1.8;
     color: #0a0a0a;
-}
-
-a {
-    color:$blue-1;
-    text-decoration: none;   
-}
-
-a:link {
-    color:$blue-1;
-    text-decoration: none;  
-}
-
-a:visited {
-    color:$blue-1;
-    text-decoration: none;
-}
-
-a:hover {
-    color:$blue-1;
-    text-decoration: none;
-}
-
-a:active {
-    color:$blue-1;
-    text-decoration:none;
 }
 
 #map{
@@ -219,3 +191,4 @@ a:active {
 .twentytwenty-overlay{
     display:none;
 }
+
