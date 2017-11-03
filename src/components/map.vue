@@ -18,7 +18,6 @@ export default {
   },
   mounted: function() {
     this.setupMap();
-   // this.insertFirstContent();
     this.getMapContetn();
   },
    methods:{
@@ -96,17 +95,6 @@ export default {
           });
         });
     },
-    insertFirstContent: function(){
-       contentfulClient.getAsset("5wutUrRRPUC8wg6CiMOW0W")
-      .then(entry => {
-           $("#content-div").html(`<content-replace-div id="content-replace" title="first" desc="firstdesc"
-          old-image="`+entry.fields.file.url+`" new-image="`+entry.fields.file.url+`"
-          year="17"></content-replace-div>`);
-          new Vue().$mount(`#content-replace`);
-      });     
-  //    $("#content-div").attr('class', 'open');
-  //    $("#content-div").css({"width": "0vw"});
-    }
   }
 };
 </script>

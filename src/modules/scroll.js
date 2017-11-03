@@ -1,6 +1,9 @@
-$(window).scroll(function (event) {
-    var scroll = $(window).scrollTop();
-    //console.log(scroll);
+$(function() {
+    //caches a jQuery object containing the header element
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 1530) {
+           $("#header").remove();
+        } 
+    });
 });
-
-//export default test;
