@@ -80,7 +80,7 @@ export default {
                   this.activMarker = marker;
                 }
                 this.activIcon.then(newIcon =>{marker.setIcon(newIcon)});
-                this.map.panTo({lat:marker.position.lat(),lng:marker.position.lng()-.014});
+                //this.map.panTo({lat:marker.position.lat(),lng:marker.position.lng()-.014});
                 $("#content-div").html(`<content-replace-div id="content-replace" title="${item.fields.title}" desc="${item.fields.description}"
                   old-image="${item.fields.oldPicture.fields.file.url}" new-image="${item.fields.newPicture.fields.file.url}"
                   year="${item.fields.year}" slider="${item.fields.slider}"></content-replace-div>`);
