@@ -83,7 +83,7 @@ body{
     line-height: 140%;
     letter-spacing: 0.1em;
     margin-top: 2em;	
-    margin-bottom: 3.2em;
+    margin-bottom: 3em;
     text-align: left;
     color: #000000;
     
@@ -176,8 +176,8 @@ background-color: #ffffff;
 }
 
 hr {
-    
-}
+    border-top: 2px dashed #8c8b8b;
+}    
 #map{
     position:absolute;
     width:98.9vw;
