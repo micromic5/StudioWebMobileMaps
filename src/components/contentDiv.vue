@@ -1,21 +1,21 @@
 <template>
-   <div class="grid-container">
+<div class="grid-container">
    
-      <div class="grid-x title">
-  <div class="medium-6 large-4 cell"></div>
-  <div class="medium-6 large-8 cell"><h1>{{ title }}</h1></div>
+<div class="grid-x title">
+  <div class="large-4 cell"></div>
+  <div class="large-9 cell"><h1>{{ title }}</h1></div>
 </div>
-        
 
-       <div class="grid-x grid-padding-x text">
-            <div class="large-4  cell"></div>
-            <div class="large-8  cell">
+<div class="grid-x text">
+           <div class="large-4 cell"></div>
+            <div class="large-9 cell">
                 <p> {{ desc }}</p>
             </div>
-       </div>
+</div>
 
     <div class="grid-x grid-padding-x">
-        <div class="large-offset-2 large-10 cell">
+        <div class="large-4 cell"></div>
+            <div class="large-9 cell">
             <div class="border-image">
             <div v-if="showSlider!==false" :id="'id'+id" class="image-slider-container">
                 <img :src="oldImage" @load="imageLoaded">
