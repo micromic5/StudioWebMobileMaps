@@ -59,16 +59,9 @@
         <div class="large-8 cell">
              <h2>Name</h2><input type="text">
              <h2>Geschichte</h2><textarea rows="10" type="text"></textarea><br>
-              <button>Versenden</button>
         </div>
 </div>
-
-
-      
-
-   
         <div v-if="yearDisabled" class="year">{{year}}</div>
-
         </div>
     </div>
 </template>
