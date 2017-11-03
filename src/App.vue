@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-    <div class="header">
-      <h1>Die Emmenbrücke</h1>
-      <h2>zu deiner Geschichte</h2>
-   </div>
+    <div id="deleteall">
+        <div class="header">
+          <h1>Die Emmenbrücke</h1>
+          <h2>zu deiner Geschichte</h2>
+      </div>
+   
     <a href="#map-div" class="click"><img src="./assets/img/hero-1.png" style="width:100vw"></a>
-    
+    </div>
  
     <div id="map-div"><map-component></map-component></div>
     <div id="content-div" class="close"></div> 
 
- </div>
+ 
+  </div>
 </template>
 
 <script>
