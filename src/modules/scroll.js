@@ -2,7 +2,8 @@ $(function() {
     //caches a jQuery object containing the header element
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
-        if (scroll >= 1530) {
+        console.log(scroll);
+        if (scroll >= 850) {
            $("#header").remove();
         } 
     });
