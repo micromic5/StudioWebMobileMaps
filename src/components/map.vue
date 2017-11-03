@@ -26,7 +26,7 @@ export default {
       const element = document.getElementById("map");
       const options = {
         zoom: 15,
-        center: new google.maps.LatLng(47.071676, 8.294066),
+        center: new google.maps.LatLng(47.071676,8.303),
         disableDefaultUI: true,
         navigationControl: false,
         mapTypeControl: false,

@@ -1,18 +1,18 @@
 .open {
    /* transform:translate(75vw,0);*/
-    left:60vw;
-    -webkit-transition:width 3000ms ease-in-out;
-    -moz-transition:width 3000ms ease-in-out;
-    -o-transition:width 3000ms ease-in-out;
-    transition:width 3000ms ease-in-out;
+    left:25vw;
+    -webkit-transition: 3000ms ease-in-out;
+    -moz-transition: 3000ms ease-in-out;
+    -o-transition: 3000ms ease-in-out;
+    transition: 3000ms ease-in-out;
     background-color: #E17950;
 }
 
 .close {
-    left:-400vw;    
-    -webkit-transition:width 3000ms ease-in-out;
-    -moz-transition:width 3000ms ease-in-out;
-    -o-transition:width 3000ms ease-in-out;
-    transition:width 3000ms ease-in-out, height 3000ms ease-in-out;
+    left:100vw;    
+    -webkit-transition: 3000ms ease-in-out;
+    -moz-transition: 3000ms ease-in-out;
+    -o-transition: 3000ms ease-in-out;
+    transition: 3000ms ease-in-out, height 3000ms ease-in-out;
     background-color: #000000;
 }
