@@ -18,7 +18,6 @@ export default {
   name: "app",
   data() {
     return {
-      message: "Welcome to Vue.js"
     };
   },
   mounted: function() {
@@ -42,21 +41,6 @@ export default {
     });
   },
   methods: {
-    increment: function() {
-      this.counter++;
-    }
   }
 };
-
-
-$(function() {
-    //caches a jQuery object containing the header element
-    $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-        console.log(scroll);
-        if (scroll >= 1530) {
-           $("#header").remove();
-        } 
-    });
-});
 </script>
