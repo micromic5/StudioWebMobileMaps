@@ -42,9 +42,9 @@ export default {
        if(this.activMarker != null){
         this.passivIcon.then(newIcon =>{this.activMarker.setIcon(newIcon)});
        }
-        if($("#content-div").attr("class") != "close"){
+       /* if($("#content-div").attr("class") != "close"){
           $("#content-div").css({"overflow": "visible"});
-        }
+        }*/
         $("#content-div").attr('class', 'close');
        
       }.bind(this));
