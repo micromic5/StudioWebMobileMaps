@@ -12,7 +12,7 @@
         </div>
 
     <div id="map-div"><map-component></map-component></div>
-    <div id="content-div" class="close" style="left:100vw;"></div> 
+    <div id="content-div" class="close"></div> 
 
     </div>
 
