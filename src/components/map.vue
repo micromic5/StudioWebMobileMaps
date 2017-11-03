@@ -29,9 +29,10 @@ export default {
         center: new google.maps.LatLng(47.071676, 8.294066),
         disableDefaultUI: true,
         navigationControl: false,
-    mapTypeControl: false,
-    scaleControl: false,
-    draggable: false,
+        mapTypeControl: false,
+        scaleControl: false,
+        draggable: false,
+        scrollwheel: false,
       };
       this.map = new google.maps.Map(element, options);
       this.map.setOptions({styles:mapStyleModule});

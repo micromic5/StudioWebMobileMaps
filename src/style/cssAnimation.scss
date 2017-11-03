@@ -1,7 +1,6 @@
 .open {
    /* transform:translate(75vw,0);*/
-    right:75vw;
-    
+    left:60vw;
     -webkit-transition:width 3000ms ease-in-out;
     -moz-transition:width 3000ms ease-in-out;
     -o-transition:width 3000ms ease-in-out;
@@ -10,7 +9,7 @@
 }
 
 .close {
-    right:-75vw;    
+    left:0vw;    
     -webkit-transition:width 3000ms ease-in-out;
     -moz-transition:width 3000ms ease-in-out;
     -o-transition:width 3000ms ease-in-out;

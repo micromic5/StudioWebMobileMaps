@@ -1,10 +1,26 @@
 <template>
    <div>
-        <div class="title">{{ title }}</div>
-        <div class="description">
-            {{ desc }}
+<div class="grid-container">
+
+      <div class="grid-x grid-padding-x">
+        <div class="large11 cell">
+          <h1>{{ title }}</h1>
+          <!-- Grid Example -->
         </div>
-        <div v-if="showSlider!==false" :id="'id'+id" class="image-slider-container">
+      </div>
+
+       <div class="grid-x grid-padding-x text">
+            <div class="large-10 large-offset-2 cell">
+                <p> {{ desc }}</p>
+            </div>
+       </div>
+
+         <div class="grid-x grid-padding-x">
+            <div class="large-offset-2 large-10 cell">
+              <div class="border-image">
+                
+
+                   <div v-if="showSlider!==false" :id="'id'+id" class="image-slider-container">
             <img :src="oldImage" @load="imageLoaded">
             <img :src="newImage" @load="imageLoaded">
         </div>
@@ -12,6 +28,16 @@
             <img :src="oldImage">
             <img :src="newImage">
         </div>
+
+
+              </div>
+            </div>
+                       
+          </div>
+
+</div>
+       
+       
         <div v-if="yearDisabled" class="year">{{year}}</div>
     </div>
 </template>
