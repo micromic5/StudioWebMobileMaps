@@ -2,7 +2,8 @@
   <div id="app">
     
     <div id="header">
-      <a href="#map-div" class="click"><img src="./assets/img/TitleScreen.png" style="width:100vw"></a>
+      <a href="#map-div" class="click"><img src="./assets/img/hero-1.png" style="width:100vw"></a>
+      <h2>Die Emmenbrücke</h2>
    </div>
    
     <div id="map-div"><map-component></map-component></div>
